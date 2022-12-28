@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> 
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <style>
       /* Add your own styles here */
       body {
@@ -88,5 +89,15 @@
         background-color: transparent;
         font-size: 16px;
         width: 100%;
-      }
-      .t
+        
+  <script>
+      const shortcutElements = document.querySelectorAll('.shortcut');
+      shortcutElements.forEach(element => {
+        element.addEventListener('click', () => {
+          const url = element.getAttribute('data-url');
+          chrome.tabs.create({ url });
+        });
+      });
+    </script>
+  </body>
+</html>
