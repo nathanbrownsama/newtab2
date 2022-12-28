@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <head>
     <style>
+      /* Add your own styles here */
       body {
         font-family: 'Poppins', sans-serif;
-      }
-      .notes {
-        width: 300px;
-        height: 500px;
-        border: 1px solid #fccc00;
-        overflow: auto;
-      }
-      .list {
-        width: 300px;
-        height: 500px;
-        border: 1px solid #fccc00;
-        overflow: auto;
-      }
-      .shortcuts {
+        margin: 0;
+        padding: 0;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 100vh;
       }
-      .shortcut {
-        width: 150px;
-        height: 150px;
+      .header {
+        background-color: #fccc00;
+        color: #fff;
         display: flex;
         align-items: center;
-        justify-content: center;
-        border: 1px solid #fccc00;
-        margin: 10px;
+        padding: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+      .search-input {
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .search-button {
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #fccc00;
+        font-size: 16px;
+        padding: 10px;
         cursor: pointer;
       }
-    </style>
-  </head>
-  <body>
-    <!-- Notes section -->
-    <div class="section">
-      <h2>Notes</h2>
-      <div class="notes"></div>
-    </div>
-    <!-- List section -->
-    <div class="section">
-      <h2>List</h2>
-      <div class="list"></div>
-    </div>
-    <!-- Shortcuts section -->
-    <div class="section">
-      <h2>Shortcuts</h2>
-      <div class="shortcuts">
-        <div class="shortcut" data-url="https://www.google.com">Google</div>
-        <div class="shortcut" data-url="https://www.youtube.com">YouTube</div>
-        <!-- Add more shortcuts here -->
-      </div>
-    </div>
+      .search-button:hover {
+        background-color: #fccc00;
+        color: #fff;
+      }
+      .quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .quick-link {
+        width: 25%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .quick-link h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .quick-link p {
+        margin: 0;
+        font-size: 14px;
+        color: #999;
+      }
+      .tasks {
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .tasks h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .tasks .task {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .tasks .task input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      .tasks .task input[type="text"] {
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        width: 100%;
+      }
 
     <!-- Add a script to handle the website shortcuts -->
     <script>
