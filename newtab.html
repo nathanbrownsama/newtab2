@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+     <link rel="stylesheet" href="newtab.css">
     <style>
       body {
         font-family: 'Poppins', sans-serif;
@@ -97,18 +98,19 @@
       }
       </style>
 </head>
-       <body>
-    <h1>Productivity Extension</h1>
-    <h2>Note-taking</h2>
-    <form>
-      <input type="text" id="note" placeholder="Enter your note here">
-      <button type="submit" id="save-button">Save</button>
-    </form>
-    <h2>Todo list</h2>
-    <form>
-      <input type="text" id="task" placeholder="Enter your task here">
-      <button type="submit" id="add-button">Add</button>
-    </form>
-    <ul id="task-list"></ul>
+     <body>
+    <header class="header">
+      <h1>Idenati Extension</h1>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+      </div>
+    </header>
+    <div class="quick-links">
+      <div class="quick-link">
+        <h2>Gmail</h2>
+        <p>Check your emails</p>
+      </div>
+      <div class="quick-link">
   </body>
       </html>
